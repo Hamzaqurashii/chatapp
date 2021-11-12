@@ -1,0 +1,1229 @@
+{
+	"components": {
+		"examples": {},
+		"headers": {},
+		"parameters": {},
+		"requestBodies": {},
+		"responses": {},
+		"schemas": {
+			"adminResponse": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"password": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id",
+					"name",
+					"password"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"getReqAdmin": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"getReqAdminByUserNameAndPassword": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"password": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"name",
+					"password"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"saveReqAdmin": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"password": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"name",
+					"password"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"updateReqAdmin": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"password": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id",
+					"name",
+					"password"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"deleteReqAdmin": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"userResponse": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"userName": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"password": {
+						"type": "string"
+					},
+					"adminName": {
+						"type": "string"
+					},
+					"adminPassword": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id",
+					"userName",
+					"email",
+					"password",
+					"adminName",
+					"adminPassword"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"getReqUser": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"saveReqUser": {
+				"properties": {
+					"userName": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"password": {
+						"type": "string"
+					},
+					"adminName": {
+						"type": "string"
+					},
+					"adminPassword": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"userName",
+					"email",
+					"password",
+					"adminName",
+					"adminPassword"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"updateReqUser": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"userName": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"password": {
+						"type": "string"
+					},
+					"adminName": {
+						"type": "string"
+					},
+					"adminPassword": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id",
+					"userName",
+					"email",
+					"password",
+					"adminName",
+					"adminPassword"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"deleteReqUser": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"groupResponse": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"groupName": {
+						"type": "string"
+					},
+					"users": {
+						"items": {},
+						"type": "array"
+					},
+					"adminName": {
+						"type": "string"
+					},
+					"adminPassword": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id",
+					"groupName",
+					"users",
+					"adminName",
+					"adminPassword"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"getReqGroup": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"getReqGroupByUserID": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"saveReqGroup": {
+				"properties": {
+					"groupName": {
+						"type": "string"
+					},
+					"users": {
+						"items": {},
+						"type": "array"
+					},
+					"adminName": {
+						"type": "string"
+					},
+					"adminPassword": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"groupName",
+					"users",
+					"adminName",
+					"adminPassword"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"updateReqGroup": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"groupName": {
+						"type": "string"
+					},
+					"users": {
+						"items": {},
+						"type": "array"
+					},
+					"adminName": {
+						"type": "string"
+					},
+					"adminPassword": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id",
+					"groupName",
+					"users",
+					"adminName",
+					"adminPassword"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"deleteReqGroup": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"messageResponse": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"message": {
+						"type": "string"
+					},
+					"user": {
+						"type": "string"
+					},
+					"group": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id",
+					"message",
+					"user",
+					"group"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"getReqMessage": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"getReqMessageByAnyKeyWord": {
+				"properties": {
+					"word": {
+						"type": "string"
+					},
+					"adminName": {
+						"type": "string"
+					},
+					"adminPassword": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"word",
+					"adminName",
+					"adminPassword"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"getReqMessageByGroupID": {
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"adminName": {
+						"type": "string"
+					},
+					"adminPassword": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"id",
+					"adminName",
+					"adminPassword"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"saveReqMessage": {
+				"properties": {
+					"message": {
+						"type": "string"
+					},
+					"user": {
+						"type": "string"
+					},
+					"group": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"message",
+					"user",
+					"group"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"updateReqMessage": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"message": {
+						"type": "string"
+					},
+					"user": {
+						"type": "string"
+					},
+					"group": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id",
+					"message",
+					"user",
+					"group"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"deleteReqMessage": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id"
+				],
+				"type": "object",
+				"additionalProperties": false
+			}
+		},
+		"securitySchemes": {}
+	},
+	"info": {
+		"title": "food-delivery-service",
+		"version": "1.0.0",
+		"license": {
+			"name": "MIT"
+		},
+		"contact": {
+			"name": "Muhammad Hamza"
+		}
+	},
+	"openapi": "3.0.0",
+	"paths": {
+		"/admin/getAdmin": {
+			"post": {
+				"operationId": "GetAdmin",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/adminResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"admin"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/getReqAdmin"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/admin/getAdminByUserNameAndPasword": {
+			"post": {
+				"operationId": "GetAdminByUserNameAndPasword",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/adminResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"admin"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/getReqAdminByUserNameAndPassword"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/admin/saveAdmin": {
+			"post": {
+				"operationId": "SaveAdmin",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/adminResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"admin"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/saveReqAdmin"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/admin/updateAdmin": {
+			"post": {
+				"operationId": "UpdateAdmin",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/adminResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"admin"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/updateReqAdmin"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/admin/deleteAdmin": {
+			"delete": {
+				"operationId": "DeleteAdmin",
+				"responses": {
+					"200": {
+						"description": "data deleted"
+					}
+				},
+				"tags": [
+					"admin"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/deleteReqAdmin"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/admin/getAllAdmins": {
+			"post": {
+				"operationId": "GetAllAdmins",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"$ref": "#/components/schemas/adminResponse"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"admin"
+				],
+				"security": [],
+				"parameters": []
+			}
+		},
+		"/user/getUser": {
+			"post": {
+				"operationId": "GetUser",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/userResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"user"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/getReqUser"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/user/saveUser": {
+			"post": {
+				"operationId": "SaveUser",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/userResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"user"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/saveReqUser"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/user/updateUser": {
+			"post": {
+				"operationId": "UpdateUser",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/userResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"user"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/updateReqUser"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/user/deleteUser": {
+			"delete": {
+				"operationId": "DeleteUser",
+				"responses": {
+					"200": {
+						"description": "data deleted"
+					}
+				},
+				"tags": [
+					"user"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/deleteReqUser"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/user/getAllUsers": {
+			"post": {
+				"operationId": "GetAllUsers",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"$ref": "#/components/schemas/userResponse"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"user"
+				],
+				"security": [],
+				"parameters": []
+			}
+		},
+		"/group/getGroup": {
+			"post": {
+				"operationId": "GetGroup",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/groupResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"group"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/getReqGroup"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/group/getGroupByUserID": {
+			"post": {
+				"operationId": "GetReqGroupByUserID",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/groupResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"group"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/getReqGroupByUserID"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/group/saveGroup": {
+			"post": {
+				"operationId": "SaveGroup",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/groupResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"group"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/saveReqGroup"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/group/updateGroup": {
+			"post": {
+				"operationId": "UpdateGroup",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/groupResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"group"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/updateReqGroup"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/group/deleteGroup": {
+			"delete": {
+				"operationId": "DeleteGroup",
+				"responses": {
+					"200": {
+						"description": "data deleted"
+					}
+				},
+				"tags": [
+					"group"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/deleteReqGroup"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/group/getAllGroups": {
+			"post": {
+				"operationId": "GetAllGroups",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"$ref": "#/components/schemas/groupResponse"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"group"
+				],
+				"security": [],
+				"parameters": []
+			}
+		},
+		"/message/getMessage": {
+			"post": {
+				"operationId": "GetMessage",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/messageResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"message"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/getReqMessage"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/message/getMessageByAnyKeyWord": {
+			"post": {
+				"operationId": "GetMessageByAnyKeyWord",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/messageResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"message"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/getReqMessageByAnyKeyWord"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/message/getMessageByGroupID": {
+			"post": {
+				"operationId": "GetMessageByGroupID",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/messageResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"message"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/getReqMessageByGroupID"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/message/saveMessage": {
+			"post": {
+				"operationId": "SaveMessage",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/messageResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"message"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/saveReqMessage"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/message/updateMessage": {
+			"post": {
+				"operationId": "UpdateMessage",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/messageResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"message"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/updateReqMessage"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/message/deleteMessage": {
+			"delete": {
+				"operationId": "DeleteMessage",
+				"responses": {
+					"200": {
+						"description": "data deleted"
+					}
+				},
+				"tags": [
+					"message"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/deleteReqMessage"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/message/getAllMessages": {
+			"post": {
+				"operationId": "GetAllMessages",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"$ref": "#/components/schemas/messageResponse"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"message"
+				],
+				"security": [],
+				"parameters": []
+			}
+		}
+	},
+	"servers": [
+		{
+			"url": "/"
+		}
+	]
+}
